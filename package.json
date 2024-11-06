@@ -11,7 +11,13 @@
   "dependencies": {
     "react": "19.0.0-rc-02c0e824-20241028",
     "react-dom": "19.0.0-rc-02c0e824-20241028",
-    "next": "15.0.2"
+    "next": "15.0.2",
+    "@dynamic-labs/sdk-react-core": "^3.0.0-alpha",
+    "viem": "*",
+    "@dynamic-labs/wagmi-connector": "^3.0.0-alpha",
+    "@tanstack/react-query": "^5.27.5",
+    "wagmi": "^2.5.7",
+    "@dynamic-labs/ethereum": "^3.0.0-alpha"
   },
   "devDependencies": {
     "typescript": "^5",

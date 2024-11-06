@@ -4,6 +4,11 @@
 import { DynamicWidget } from "@/lib/dynamic";
 import { useState, useEffect } from 'react';
 import DynamicMethods from "@/app/components/Methods";
+
+import eruda from 'eruda'
+
+eruda.init()
+
 import './page.css';
 
 const checkIsDarkSchemePreferred = () => {

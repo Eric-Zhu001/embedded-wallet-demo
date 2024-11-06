@@ -5,8 +5,12 @@ import { DynamicWidget } from "@/lib/dynamic";
 import { useState, useEffect } from 'react';
 import DynamicMethods from "@/app/components/Methods";
 
-import eruda from 'eruda'
+// import eruda from 'eruda'
+// import dynamic from 'next/dynamic'
 
+// const TerminalComponent = dynamic(() => import('eruda'), {
+//     ssr: false
+// })
 
 import './page.css';
 
@@ -21,10 +25,19 @@ export default function Main() {
   const [isDarkMode, setIsDarkMode] = useState(checkIsDarkSchemePreferred);
 
 
-  useEffect(() => {
-    eruda.init()
-  },[])
+  // useEffect(() => {
+  //   eruda?.init()
+  // },[])
 
+  useEffect(() => {
+    const erudaFn = async () => {
+        const eruda = await import('eruda')
+        
+        eruda.default.init()
+        // Add logic with `term`
+    }
+    erudaFn()
+}, [])
   
 
   useEffect(() => {

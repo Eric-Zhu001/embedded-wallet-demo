@@ -7,7 +7,6 @@ import DynamicMethods from "@/app/components/Methods";
 
 import eruda from 'eruda'
 
-eruda.init()
 
 import './page.css';
 
@@ -20,6 +19,13 @@ const checkIsDarkSchemePreferred = () => {
 
 export default function Main() {
   const [isDarkMode, setIsDarkMode] = useState(checkIsDarkSchemePreferred);
+
+
+  useEffect(() => {
+    eruda.init()
+  },[])
+
+  
 
   useEffect(() => {
     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
